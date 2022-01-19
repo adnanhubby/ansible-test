@@ -1,0 +1,21 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install docker
+    yum: 
+      name: docker
+
+  - name: add php support for apache
+    yum: 
+      name: php    
+    
+  - name: install httpd
+    yum:
+      name: httpd
+   
+  - name: update repository index
+    yum:
+      update_cache: yes    
