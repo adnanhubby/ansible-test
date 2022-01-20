@@ -1,0 +1,17 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install docker and httpd
+    yum: 
+      name: 
+        - docker
+        - httpd
+      state: latest    
+
+
+  - name: update repository index
+    yum:
+      update_cache: yes  
