@@ -7,10 +7,26 @@
   - name: install docker
     yum: 
       name: docker
+<<<<<<< HEAD
+      state: latest 
+=======
+>>>>>>> 0d33902f4163bd29f912eb3687207ce78d046088
 
   - name: add php support for apache
     yum: 
       name: php    
+<<<<<<< HEAD
+      state: latest
+
+  - name: install httpd
+    yum:
+      name: httpd
+      state: latest
+
+  - name: update repository index
+    yum:
+      update_cache: yes  
+=======
     
   - name: install httpd
     yum:
@@ -19,3 +35,4 @@
   - name: update repository index
     yum:
       update_cache: yes    
+>>>>>>> 0d33902f4163bd29f912eb3687207ce78d046088

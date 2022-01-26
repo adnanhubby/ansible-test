@@ -4,6 +4,7 @@
   become: true
   tasks:
 
+<<<<<<< HEAD
   - name: install updates (amazon linux 2)
     yum:
       update_only: yes
@@ -50,3 +51,23 @@
         - mkdir -p
         - tree   
 
+=======
+  - name: install docker
+    yum: 
+      name: docker
+      state: latest 
+
+  - name: add php support for apache
+    yum: 
+      name: php    
+      state: latest
+
+  - name: install httpd
+    yum:
+      name: httpd
+      state: latest
+
+  - name: update repository index
+    yum:
+      update_cache: yes  
+>>>>>>> 80716ae189ba38bb00acd62e3ebf136bece4ca4c

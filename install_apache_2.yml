@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install docker and add php support for apache and install httpd
+    yum:
+      name:
+        - docker
+        - php 
+        - httpd 
+      state: latest
