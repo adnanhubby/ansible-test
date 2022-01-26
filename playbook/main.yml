@@ -1,0 +1,8 @@
+---
+- name: web_server
+  hosts: all 
+  user: ansible
+  become: true
+
+  roles:
+    - role: webserver
