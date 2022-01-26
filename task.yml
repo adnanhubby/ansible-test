@@ -16,8 +16,8 @@
       vpc_subnet_id: subnet-03b5fff4f195030ce
       wait: yes
       assign_public_ip: yes
-      aws_access_key: "AKIA3TEUAJEY33DKBRRA"
-      aws_secret_key: "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"
+      aws_access_key: ""
+      aws_secret_key: ""
     register: ec2
 
 
