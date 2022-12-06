@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: ec2-user
   become: true
   tasks:
     - name: Install packages
