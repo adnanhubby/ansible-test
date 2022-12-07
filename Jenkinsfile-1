@@ -1,22 +1,26 @@
-pipeline {
+pipeline { 
      agent {
      label 'linux'
-  }
-  stages {
-        stage('Checkout Code') {
-            steps {
+  }       
+          stages {
+            stage('Checkout Code') {
+              steps {
                 git "https://github.com/adnanhubby/ansible-test.git"
+              }
+            } 
+            stages {
+              stage('Hello') {
+                steps {
+                  sh '''
+                  ansible --version
+                  ansible-playbook --version
+                  ansible-galaxy --version
+                  '''
+               }
             }
         }
-  stages {
-    stage('Hello') {
-      steps {
-        sh '''
-          ansible --version
-          ansible-playbook --version
-          ansible-galaxy --version
-        '''
-      }
-    }
-  }
+    }      
 }
+    
+  
+
